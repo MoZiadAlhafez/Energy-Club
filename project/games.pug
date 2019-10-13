@@ -1,0 +1,80 @@
+include ./pug/Helpers/Variables
+include ./pug/components/Buttons
+include ./pug/components/TopBanar
+include ./pug/components/text_img
+include ./pug/components/img_text
+include ./pug/Data/GamesTypes
+include ./pug/Data/GamesList
+include ./pug/Data/Statistics
+include ./pug/Data/Trainers
+doctype
+html
+    head
+        include ./pug/Helpers/HeadCalls
+        title #{ThemeName} | Games Page
+    body
+        // Navbar
+        include ./pug/components/Navbar
+        // Navbar
+        +TopBanar(ThemeName, 'Games')
+        +TextImgSection('all sports', './images/17172.jpg', 'dark')
+                                        
+        section.games
+            .container
+                h3.section-title games list
+                .row
+                    - for (var game = 0; game < gamesList.length; game++)
+                        .col-lg-3
+                            div.card.shadow-effect
+                                figure.imghvr-slide-up
+                                    img(src=gamesList[game].img alt=gamesList[game].title class="card-img-top")
+                                    figcaption: p.text-card This Is A Wider Card With Supporting Text
+
+                                div.card-body
+                                    h5.card-title #{gamesList[game].title}
+                                
+        section.game-types
+            .container
+                h3.section-title games types
+                .row
+                    - for (var type = 0; type < GamesTypes.length; type++)
+                        .col-lg-6
+                            .card.shadow-effect
+                                .row.no-gutters
+                                    .col-md-4
+                                        img(src=GamesTypes[type].img)
+                                    .col-md-8
+                                        .card-body
+                                            h5.card-title #{GamesTypes[type].title}
+                                            p.card-text #{GamesTypes[type].disc}
+
+
+                                
+        +ImgTextSection('awesome trainers', './images/trainers.jpg', 'dark')
+
+        section.trainers
+            .container
+                h3.section-title.h2 our team
+                .row
+                    .swiper-container
+                        .swiper-wrapper
+                            - for(var trainer = 0; trainer < Trainers.length; trainer++)
+                                .swiper-slide
+                                    div.card
+                                        figure.imghvr-slide-up
+                                            img(src=Trainers[trainer].img class="card-img-top")
+                                            figcaption
+                                                h6.card-title info
+                                                ul.reset-ul
+                                                    - for(var info = 0; info < Trainers[trainer].info.length; info++)
+                                                        li #{Trainers[trainer].info[info].type} : #[span #{Trainers[trainer].info[info].val}]
+                                                    
+
+                                        div.card-body
+                                            h6.card-title= Trainers[trainer].name
+                                        div(class="card-footer text-muted")
+                                            ul.reset-ul
+                                                - for(var social = 0; social < Trainers[trainer].social.length; social++)
+                                                    li: a(href=Trainers[trainer].social[social].url): i(class=Trainers[trainer].social[social].icon)
+                        .swiper-pagination
+        include ./pug/Helpers/FooterCalls

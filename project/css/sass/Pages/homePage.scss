@@ -1,0 +1,126 @@
+.features-section{
+    @extend %NormalSection;
+    text-align: center;
+}
+
+.why-we-section {
+    @extend %NormalSection;
+    .why-us-cards{
+        .card{
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px 5px;
+            i{
+                font-size: 50px;
+                color: $BlueColor
+            }
+        }
+    }
+}
+
+
+
+
+.planes-prices{
+    @extend %NormalSection;
+    text-align: center;
+    .card{
+        .card-subtitle{
+            margin: 10px auto;
+            background: $BlueColor;
+            padding: 10px 35px;
+            border-radius: 25px;
+            color: #fff
+        }
+        li{
+            color: $BlueColor
+        }
+    }
+}
+
+
+.statistics{
+    @extend %NormalSection;
+    text-align: center;
+    
+    .card{
+        margin: 25px 0;
+        text-align: center;
+        border: none;
+        padding: 15px;
+        @extend %RightBottomBXShadow;
+
+        i{
+            font-size: 50px;
+            @extend %Transition;
+            color: $BlueColor
+        }    
+        &:hover {
+            @extend %hoverShadowEffect;
+            i {
+                transform: rotate(360deg) scale(1.2,1.2)
+            }
+        }
+    }
+}
+
+
+.testimonials{
+    padding: 20px 0 100px 0;
+    text-align: center;
+    background: #eee;
+    position: relative;
+    .carousel{
+        position: static;
+        .carousel-inner{
+            .carousel-item{
+                h5{
+                    color: $OrangeColor;
+                }
+                p{
+                    color: $BlueColor;
+                    width: 80%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    i{
+        color: $BlueColor
+    }
+    .carousel-indicators{
+        li{
+            @extend %Transition;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-size: contain;
+            border: 2px solid transparent;
+            position: relative;
+            img{
+                @extend %Transition;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: .5;
+            }
+        }
+        li.active{
+            border-color: $BlueColor;
+            img{
+                opacity: 1
+            }
+        }
+    }
+    .carousel-control-next, .carousel-control-prev {
+        width: 5%;
+        background: $BlueColor;
+        @extend %Transition;
+        i{
+            color: $OrangeColor;
+            font-size: 30px;
+        }
+    }
+}

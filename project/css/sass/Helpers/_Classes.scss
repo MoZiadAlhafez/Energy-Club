@@ -1,0 +1,106 @@
+%Transition {
+    transition: all .4s ease-in-out
+}
+%hoverShadowEffect{
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+    transform: translateY(-20px);
+}
+%RightBottomBXShadow {
+    box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+}
+
+%NormalSection {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.section-title {
+    display: inline-block;
+    color: $OrangeColor;
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 2px;
+        background: $OrangeColor;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+.card{
+    width: 90%;
+    margin: auto;
+    img{
+        width: 90%;
+        margin: auto
+    }
+    .card-body, .card-footer{
+        padding: 5px 15px;
+    }
+}
+
+.card-title{
+    color: $OrangeColor !important;
+    margin: 0 auto;
+}
+
+.card-text{
+    color: $BlueColor
+}
+
+
+figure, figcaption{
+    background: #fff !important;
+    text-align: center;
+    @extend %Transition;
+    img{
+    @extend %Transition;
+    }
+}
+
+.reset-ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.text-img-section{
+    @extend %NormalSection;
+    .info {
+        .title {
+            color: $OrangeColor;
+            i{margin-right: 10px}
+        }
+        p{color: $BlueColor}
+
+    }
+    .img {
+        width: 100%;
+        text-align: center;
+        img{width: 100%}
+    }
+}
+
+section[data-bg='dark'] {
+    background: #eee
+}
+section[data-bg='light'] {
+    background: #fff
+}
+
+.shadow-effect{
+    @extend %Transition;
+    &:hover{
+        @extend %hoverShadowEffect
+    }
+}

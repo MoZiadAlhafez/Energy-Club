@@ -1,0 +1,74 @@
+include ./pug/Helpers/Variables
+include ./pug/components/Buttons
+include ./pug/components/TopBanar
+include ./pug/components/text_img
+include ./pug/components/img_text
+
+include ./pug/Data/Articles
+doctype
+html
+    head
+        include ./pug/Helpers/HeadCalls
+        title #{ThemeName} | Articles Page
+    body
+        // Navbar
+        include ./pug/components/Navbar
+        // Navbar
+        +TopBanar(ThemeName, 'articles')
+        +TextImgSection('follow our articles', './images/articles.jpg', 'light')
+
+        section(class='articles' data-bg='dark')
+            .container
+                .row
+                    .col-lg-8
+                        - for(var article = 0; article < Articles.length; article++)
+                            .card.article.shadow-effect
+                                .card-header #[i.fa.fa-clock] #{Articles[article].time} ago
+                                
+                                .card-body
+                                    .media
+                                        .col-lg-4
+                                            img(src="./images/news.jpg" class="mr-3")
+                                        .col-lg-8
+                                            .media-body
+                                                h5.card-title= Articles[article].title
+                                                p.card-text #{Articles[article].disc} #[a.read-more(href='./singlearticle.html') read more #[i.fa.fa-chevron-right]]  
+
+                                .card-footer #[span #[i.fa.fa-eye] #{Articles[article].views}]
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link" href="#prev">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#1">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#2">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#3">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#next">Next</a></li>
+                            </ul>
+                        </nav>
+                        
+                    .col-lg-4
+                        include ./pug/components/Aside
+                    
+                        
+        section.text-img-section.subscribe
+            .container
+                .row
+                    .col-lg-6
+                        .img 
+                            img(src='./images/subscribe.jpg')
+                    .col-lg-6
+                        .info
+                            h3.section-title.h2 awesome trainres
+                            p.card-textWith.lead Lorem Ipsum is simply dummy text of the printing
+                            <form class="form-inline">
+
+                                <div class="input-group mb-2 mr-sm-2">
+                                    <div class="input-group-prepend">
+                                    <div class="input-group-text">@</div>
+                                    </div>
+                                    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-Mail">
+                                </div>
+
+                                
+                                <button type="submit" class="btn btn-danger mb-2">subscribe</button>
+                            </form>
+                    

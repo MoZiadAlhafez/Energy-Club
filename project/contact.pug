@@ -1,0 +1,67 @@
+include ./pug/Helpers/Variables
+include ./pug/components/TopBanar
+doctype
+html
+    head
+        include ./pug/Helpers/HeadCalls
+        title #{ThemeName} | Contact
+    body
+        
+        // Navbar
+        include ./pug/components/Navbar
+        // Navbar
+        
+        // Top Banar
+        +TopBanar(ThemeName, 'contact')
+        // Top Banar
+        .image
+            .container
+                
+        .contact
+            .container
+                h3.section-title contact us
+                .row
+                    .col-lg-6
+                        .form
+                            h4.section-title send message
+                            <form>
+                                <div class="col-auto">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                        <div class="input-group-text"> <i class='fa fa-user'></i> </div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class='fa fa-at'></i> </div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                        <div class="input-group-text"><i class='fa fa-phone' style='transform: rotateY(180deg)'></i> </div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="input-group mb-2">
+                                        
+                                        <textarea type="text" placeholder="subject" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                    
+                    .col-lg-6
+                        .contact-info
+                            h4.section-title our info 
+                            p.lead Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, Lorem Ipsum Is Simply Dummy Text Of The Printing And Typeseting Industry.
+                            ul.details.reset-ul
+                                li #[i.fa.fa-at] info@comanyname.com
+                                li #[i.fa.fa-phone] 001133557799
+                                li #[i.fa.fa-street-view] 53 abo kir st , egypt - alex

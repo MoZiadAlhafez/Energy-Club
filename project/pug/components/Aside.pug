@@ -1,0 +1,31 @@
+- 
+    var categories = [
+        {title: 'pugjs', number: '2'},
+        {title: 'vuejs', number: '5'},
+        {title: 'gulpjs', number: '4'},
+        {title: 'nodejs', number: '3'},
+        {title: 'reactjs', number: '6'},
+    ]   
+
+aside
+    .categories
+        .card
+            div.card-header #[i.fa.fa-th-large] categories
+            ul.list-group.list-group-flush
+                - for (var num = 0; num < categories.length; num++)
+                    li.list-group-item #{categories[num].title} #[span.badge.badge-pill #{categories[num].number} ]
+                
+
+    .last
+            <div class="card">
+                div.card-header #[i.fa.fa-clock] last article
+                <img src="./images/news.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                </ul>
+            </div>
