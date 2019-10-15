@@ -24,7 +24,7 @@ html
                 h3.section-title games list
                 .row
                     - for (var game = 0; game < gamesList.length; game++)
-                        .col-6.col-lg-3.col-md-4
+                        .col-12.col-lg-3.col-md-4
                             div.card.shadow-effect
                                 figure.imghvr-slide-up
                                     img(src=gamesList[game].img alt=gamesList[game].title class="card-img-top")
@@ -38,7 +38,7 @@ html
                 h3.section-title games types
                 .row
                     - for (var type = 0; type < GamesTypes.length; type++)
-                        .col-6
+                        .col-12
                             .card.shadow-effect
                                 .row.no-gutters
                                     .col-12.col-lg-4
@@ -47,12 +47,7 @@ html
                                         .card-body
                                             h5.card-title #{GamesTypes[type].title}
                                             p.card-text #{GamesTypes[type].disc}
-                        //- .col-6.xs-hidden.sm-hidden
-                        //-     .card.shadow-effect
-                        //-         img(src=GamesTypes[type].img)
-                        //-         .card-body
-                        //-             h5.card-title #{GamesTypes[type].title}
-                        //-             p.card-text #{GamesTypes[type].disc}
+                        
 
 
                                 

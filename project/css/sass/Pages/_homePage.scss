@@ -163,6 +163,14 @@
             box-shadow: 5px 5px 20px rgba(0,0,0,.5);
         }
     }
+    .testimonials{
+        
+        
+        .carousel-control-next, .carousel-control-prev {
+            width: 10%;
+            background: $BlueColor;
+        }
+    }
  }
 
 // Small devices (landscape phones, 576px and up)

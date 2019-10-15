@@ -54,7 +54,7 @@ html
                         .why-us-cards
                             .row
                                 - for(var why = 0; why < whyUsPointes.length; why++)
-                                    .col-6
+                                    .col-12.col-md-6.col-lg-6
                                         .card.shadow-effect
                                             i(class=whyUsPointes[why].icon)
                                             .card-body
@@ -94,7 +94,7 @@ html
                 h3.section-title statistics
                 .row
                     - for(var fact = 0; fact < Statistic.length; fact++)
-                        .col-6.col-lg-3
+                        .col-12.col-lg-3
                             .card.shadow-effect
                                 i(class=Statistic[fact].icon)
                                 .card-body

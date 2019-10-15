@@ -449,7 +449,10 @@ aside .list-group-item {
   .statistics .card {
     margin: 0 auto 30px;
     -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); } }
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); }
+  .testimonials .carousel-control-next, .testimonials .carousel-control-prev {
+    width: 10%;
+    background: #4c368b; } }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .features-section .card {
