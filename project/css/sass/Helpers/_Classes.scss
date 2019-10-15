@@ -50,7 +50,7 @@
 }
 
 .card-title{
-    color: $OrangeColor !important;
+    color: $OrangeColor ;
     margin: 0 auto;
 }
 
@@ -74,27 +74,12 @@ figure, figcaption{
     list-style-type: none
 }
 
-.text-img-section{
-    @extend %NormalSection;
-    .info {
-        .title {
-            color: $OrangeColor;
-            i{margin-right: 10px}
-        }
-        p{color: $BlueColor}
 
-    }
-    .img {
-        width: 100%;
-        text-align: center;
-        img{width: 100%}
-    }
-}
 
 section[data-bg='dark'] {
     background: #eee
 }
-section[data-bg='light'] {
+section[data-bg='dark'] {
     background: #fff
 }
 

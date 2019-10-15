@@ -8,95 +8,18 @@
 @import './sass/components/Buttons';
 @import './sass/components/navbar';
 @import './sass/components/TopBanar';
-
+@import './sass/components/Aside';
+@import './sass/components/Text-Img';
 
 @import './sass/Pages/homePage';
 @import './sass/Pages/games';
-@import './sass/Pages/articles.scss';
-@import './sass/Pages/SingleArticle';
-
+@import './sass/Pages/articles';
+@import './sass/Pages/singlearticle';
+@import './sass/Pages/Contact';
 
 @import './sass/components/Footer';
-
+@import './sass/Helpers/FrameWork';
 body {
   font-family: 'Cairo', sans-serif;
   text-transform: capitalize;
-    height: 6000px
-}
-
-
-.contact{
-    @extend %NormalSection;
-    text-align: center;
-    .form, .contact-info {
-        text-align: left
-    }
-    .form{
-        width: 80%;
-        margin: auto;
-        textarea{
-            resize: none
-        }
-    }
-    .contact-info{
-        
-        .details{
-            text-align: left;
-            i{
-                margin-right: 20px;
-            }
-        }
-    }
-}
-
-.article{
-    margin-bottom: 50px;
-    img{
-        width: 90%
-    }
-    .card-footer, .card-header{
-        color: $BlueColor;
-    }
-    .card-footer{
-        text-align: center
-    }
-    .media{
-        display: flex;
-        align-items: center
-    }
-    a.read-more{
-        color: $BlueColor;
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-        padding: 0;
-        @extend %Transition;
-
-        i{
-            font-size:12px;
-            @extend %Transition;
-        }
-        &:hover{
-            border-color: $BlueColor;
-            i{
-                transform: translateX(5px)
-            }
-        }
-    }
-}
-aside{
-    .categories{
-        span.badge{
-            position: absolute;
-            right: 1.25rem;
-            top: 50%;
-            transform: translateY(-50%);
-            background: $BlueColor;
-            color: #fff;
-            
-        }
-    }
-    .card-header{
-        color: $BlueColor
-    }
-    .list-group-item{color: $BlueColor}
 }

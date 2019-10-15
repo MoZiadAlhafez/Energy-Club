@@ -1,0 +1,190 @@
+.games{
+    @extend %NormalSection;
+    text-align: center;
+    .card{
+        margin: 0 auto 40px;
+        border: none;
+        @extend %RightBottomBXShadow;
+
+        figcaption{color: $BlueColor;}
+        
+        .card-body{
+            display: flex;
+            align-content: center;
+            h5{
+                margin: 0 auto
+            }
+        }
+        &:hover{
+            @extend %hoverShadowEffect
+        }
+    }
+}
+
+
+.game-types{
+    @extend %NormalSection;
+    text-align: center;
+    .card {
+        margin-bottom: 30px;
+        text-align: left;
+    }
+}
+
+
+
+.trainers{
+    @extend %NormalSection;
+    text-align: center;
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 50px;
+        
+        .swiper-slide {
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .card{
+                .card-title{color: $BlueColor}
+                width: 100%;
+                padding: 0;
+                cursor: default;
+                img{width: 100%}
+                overflow: hidden;
+                figcaption{
+                    li{
+                        text-align: left;
+                        color: $OrangeColor;
+                        padding: 5px;
+                        font-size: 16px;
+                        span{
+                            color: $BlueColor
+                        }
+                    }
+                }   
+                .card-body{
+                    text-align: center;
+                }
+                .card-footer{
+                    ul{
+                        display: flex;
+                        justify-content: space-evenly;
+                        a{
+                            color: $BlueColor;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .games{
+        .card{
+            width: 80%;
+            margin: 0 auto 30px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+            .card-body{
+                h5{
+                    margin: 5px auto
+                }
+            }
+        }
+    }
+    .game-types{
+        text-align: center;
+        .card{
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+
+            width: 80%;
+            margin: 0 auto 30px;
+            text-align: center;
+            img{
+                width: 70%;
+            }
+        }
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .games{
+        .card{
+            width: 80%;
+            margin: 0 auto 30px;
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+            .card-body{
+                h5{
+                    margin: 5px auto
+                }
+            }
+        }
+    }
+    .game-types{
+        text-align: center;
+        .card{
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+
+            width: 80%;
+            margin: 0 auto 30px;
+            text-align: center;
+            img{
+                width: 70%;
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .game-types{
+        text-align: center;
+        .card{
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+
+            width: 80%;
+            margin: 0 auto 30px;
+            text-align: center;
+            img{
+                width: 70%;
+            }
+        }
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .trainers{
+        .swiper-container {
+            .swiper-slide {
+                .card{
+                    .card-title{font-size: 14px}
+                    figcaption{
+                        li{
+                            text-align: left;
+                            color: $OrangeColor;
+                            padding: 5px;
+                            font-size: 12px;
+                            span{
+                                color: $BlueColor
+                            }
+                        }
+                    }   
+                }
+            }
+        }
+    }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  }

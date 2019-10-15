@@ -1,0 +1,11 @@
+include ../Data/SocialMedia
+footer
+  .container
+    .row
+      .col-lg-12
+        ul.reset-ul
+          - for (var social = 0; social < SocialLinks.length; social++)
+            li: a(href=SocialLinks[social].url): i(class=SocialLinks[social].icon)
+      .col-lg-12
+        .copyrights
+            p all rights reserved to #[a(href='#') #{ThemeName}]  

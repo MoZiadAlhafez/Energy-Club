@@ -1,0 +1,44 @@
+.contact{
+    @extend %NormalSection;
+    text-align: center;
+    .form, .contact-info {
+        text-align: left
+    }
+    .form{
+        width: 80%;
+        margin: auto;
+        textarea{
+            resize: none
+        }
+    }
+    .contact-info{
+        
+        .details{
+            text-align: left;
+            color: $BlueColor;
+            i{
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .contact{
+        .form, .contact-info {
+            width: 80%;
+            margin: auto;
+            p{width: 80%;margin: auto}
+            .details{
+                margin: 15px ;
+                li{padding: 10px}
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {  }

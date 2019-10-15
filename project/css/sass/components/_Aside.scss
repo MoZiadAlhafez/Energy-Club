@@ -1,0 +1,27 @@
+aside{
+    .categories{
+        span.badge{
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $BlueColor;
+            color: #fff;
+            
+        }
+    }
+    .card-header{
+        color: $BlueColor
+    }
+    .list-group-item{color: $BlueColor}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .categories, .last{
+        .card{
+            width: 100%
+        }
+    }
+    
+ }

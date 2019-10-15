@@ -15,10 +15,12 @@ html
         section.signle-article
             .container
                 .row
-                    .col-lg-8
-                        .card
+                    .col-12.col-md-4.xl-hidden.lg-hidden.md-hidden
+                        include ./pug/components/Aside
+                    .col-12.col-md-8
+                        .card.read-article
                             .card-header: h4.card-title Card title
-                            img(src="./images/food.jpg" class="card-img-top" alt="...")
+                            img(src="./images/Images Section/food.jpg" class="card-img-top" alt="...")
                             .card-body
                                 
                                 .media
@@ -26,6 +28,7 @@ html
                                         p.card-text Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibusCras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibusCras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio,
                             .card-footer #[span #[i.fa.fa-eye] 23]
 
-                    .col-lg-4
+                    .col-12.col-md-4.xs-hidden.sm-hidden
                         include ./pug/components/Aside
-                                                                
+        include ./pug/components/Footer
+        include ./pug/Helpers/FooterCalls

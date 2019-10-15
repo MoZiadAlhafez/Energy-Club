@@ -12,17 +12,6 @@ var scroll = new SmoothScroll('a[data-target="inpage"]', {
 
 
 
-
-var swiper = new Swiper('.products .swiper-container', {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-
-
     var swiper = new Swiper('.trainers .swiper-container', {
       slidesPerView: 5,
       spaceBetween: 30,
@@ -31,3 +20,4 @@ var swiper = new Swiper('.products .swiper-container', {
         clickable: true,
       },
     });
+

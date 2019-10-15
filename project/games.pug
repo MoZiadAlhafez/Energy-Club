@@ -17,14 +17,14 @@ html
         include ./pug/components/Navbar
         // Navbar
         +TopBanar(ThemeName, 'Games')
-        +TextImgSection('all sports', './images/17172.jpg', 'dark')
+        +TextImgSection('all sports', './images/Images Section/sports.jpg', 'dark')
                                         
         section.games
             .container
                 h3.section-title games list
                 .row
                     - for (var game = 0; game < gamesList.length; game++)
-                        .col-lg-3
+                        .col-6.col-lg-3.col-md-4
                             div.card.shadow-effect
                                 figure.imghvr-slide-up
                                     img(src=gamesList[game].img alt=gamesList[game].title class="card-img-top")
@@ -38,21 +38,27 @@ html
                 h3.section-title games types
                 .row
                     - for (var type = 0; type < GamesTypes.length; type++)
-                        .col-lg-6
+                        .col-6
                             .card.shadow-effect
                                 .row.no-gutters
-                                    .col-md-4
+                                    .col-12.col-lg-4
                                         img(src=GamesTypes[type].img)
-                                    .col-md-8
+                                    .col-12.col-lg-8
                                         .card-body
                                             h5.card-title #{GamesTypes[type].title}
                                             p.card-text #{GamesTypes[type].disc}
+                        //- .col-6.xs-hidden.sm-hidden
+                        //-     .card.shadow-effect
+                        //-         img(src=GamesTypes[type].img)
+                        //-         .card-body
+                        //-             h5.card-title #{GamesTypes[type].title}
+                        //-             p.card-text #{GamesTypes[type].disc}
 
 
                                 
-        +ImgTextSection('awesome trainers', './images/trainers.jpg', 'dark')
+        +ImgTextSection('awesome trainers', './images/Images Section/trainers.jpg', 'dark')
 
-        section.trainers
+        section.trainers.xs-hidden.sm-hidden.md-hidden
             .container
                 h3.section-title.h2 our team
                 .row
@@ -77,4 +83,5 @@ html
                                                 - for(var social = 0; social < Trainers[trainer].social.length; social++)
                                                     li: a(href=Trainers[trainer].social[social].url): i(class=Trainers[trainer].social[social].icon)
                         .swiper-pagination
+        include ./pug/components/Footer    
         include ./pug/Helpers/FooterCalls
