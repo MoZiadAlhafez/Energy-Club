@@ -326,6 +326,11 @@ aside .list-group-item {
   .categories .card, .last .card {
     width: 100%; } }
 
+.text-img-section .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .text-img-section .info p {
   color: #4c368b; }
 
@@ -512,7 +517,9 @@ aside .list-group-item {
   text-align: center; }
   .game-types .card {
     margin-bottom: 30px;
-    text-align: left; }
+    text-align: center; }
+    .game-types .card p {
+      margin: auto; }
 
 .trainers {
   text-align: center; }
@@ -840,6 +847,7 @@ footer {
 
 body {
   font-family: 'Cairo', sans-serif;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=style.css.map */

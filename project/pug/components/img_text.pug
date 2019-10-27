@@ -3,10 +3,10 @@ mixin ImgTextSection(title, img, bg)
             .container
                 h3.section-title.lg-hidden.md-hidden.xl-hidden= title
                 .row
-                    .col-md-6
+                    .col-md-6(data-aos="zoom-out-right" data-aos-duration="1500" data-aos-easing="ease-in-sine")
                         .img 
                             img(src=img)
-                    .col-md-6
+                    .col-md-6(data-aos="zoom-out-left" data-aos-duration="1500" data-aos-easing="ease-in-sine")
                         .info
                             h3.section-title.sm-hidden.xs-hidden= title
                             p.card-text.lead Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text Ever Since The 1500s, Lorem Ipsum Is Simply Dummy Text Of The Printing And Typeseting Industry.

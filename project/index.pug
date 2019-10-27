@@ -35,7 +35,7 @@ html
                 h3.section-title our features
                 .row
                     - for(var feature = 0; feature < Features.length; feature++)
-                        .col-md-4
+                        .col-md-4(data-aos="fade-up" data-aos-duration=1000 * feature data-aos-easing="ease-in-sine")
                                 div.card.shadow-effect
                                     img(src=Features[feature].img ,  class="card-img-top" alt="...")
                                     div.card-body
@@ -50,17 +50,17 @@ html
             .container
                 h3.section-title.lg-hidden.md-hidden.xl-hidden why us ?
                 .row
-                    .col-lg-6
+                    .col-lg-6()
                         .why-us-cards
                             .row
                                 - for(var why = 0; why < whyUsPointes.length; why++)
-                                    .col-12.col-md-6.col-lg-6
+                                    .col-12.col-md-6.col-lg-6(data-aos="fade-up" data-aos-duration=1000 * why data-aos-easing="ease-in-sine")
                                         .card.shadow-effect
                                             i(class=whyUsPointes[why].icon)
                                             .card-body
                                                 h5.card-title= whyUsPointes[why].title
                                 
-                    .col-lg-6
+                    .col-lg-6(data-aos="zoom-in-left" data-aos-duration='2000' data-aos-easing="ease-in-sine")
                         .info
                             h3.section-title.xs-hidden.sm-hidden why us ? 
                             p.card-text.lead Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typeseting industry.
@@ -75,7 +75,7 @@ html
                 .row
                     - var plane
                     - for (plane = 0; plane < PlanPrice.length; plane++)
-                        .col-lg-3.col-md-6
+                        .col-lg-3.col-md-6(data-aos="fade-up" data-aos-duration=1000 * plane data-aos-easing="ease-in-sine")
                             .card.shadow-effect
                                 .card-body
                                     h5.card-title= PlanPrice[plane].level
@@ -94,7 +94,7 @@ html
                 h3.section-title statistics
                 .row
                     - for(var fact = 0; fact < Statistic.length; fact++)
-                        .col-12.col-lg-3
+                        .col-12.col-lg-3(data-aos="fade-up" data-aos-duration='1500' data-aos-easing="ease-in-sine")
                             .card.shadow-effect
                                 i(class=Statistic[fact].icon)
                                 .card-body

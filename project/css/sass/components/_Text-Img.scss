@@ -1,5 +1,8 @@
 .text-img-section{
     @extend %NormalSection;
+    .row{
+        align-items: center;
+    }
     .info {
         
         p{color: $BlueColor}
@@ -9,7 +12,6 @@
         text-align: center;
     }
 }
-
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 

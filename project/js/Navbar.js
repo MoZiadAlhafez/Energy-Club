@@ -21,3 +21,4 @@ var scroll = new SmoothScroll('a[data-target="inpage"]', {
       },
     });
 
+    AOS.init();

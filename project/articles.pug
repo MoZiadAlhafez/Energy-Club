@@ -25,7 +25,7 @@ html
                     .col-12.col-md-8
                         .row
                             - for(var article = 0; article < Articles.length; article++)
-                                .col-12
+                                .col-12(data-aos="zoom-in-up" data-aos-duration='1000')
                                     .card.article.shadow-effect
                                         .card-header #[i.fa.fa-clock] #{Articles[article].time} ago
                                         
@@ -62,10 +62,11 @@ html
         section.text-img-section.subscribe
             .container
                 .row
-                    .col-lg-6
+                    .col-lg-6(data-aos="zoom-in-up" data-aos-duration='1000')
                         .img 
                             img(src='./images/Images Section/subscribe.jpg')
-                    .col-lg-6
+                            
+                    .col-lg-6(data-aos="zoom-in-up" data-aos-duration='1000')
                         .info
                             h3.section-title.h2 awesome trainres
                             p.card-textWith.lead Lorem Ipsum is simply dummy text of the printing
